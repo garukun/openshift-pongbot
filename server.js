@@ -15,6 +15,8 @@ mongoose.connect(mongoUri);
 
 var app = require('./lib/app').instance();
 
-var port = process.env.OPENSHIFT_NODEJS_PORT || 3000;
-app.listen(port);
-console.log('Listening on port', port);
+var ip = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1';
+var port = process.env.OPENSHIFT_NODEJS_PORT || process.env.PORT || 3000;
+app.listen(port, function() {
+  console.log('Listening on port', port);  
+});
