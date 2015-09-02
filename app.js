@@ -7,11 +7,14 @@
 'use strict';
 
 var mongoose = require('mongoose');
-var mongoUri = process.env.MONGOLAB_URI || process.env.MONGOHQ_URL || 'mongodb://localhost/pingpong';
+var mongoUri = 'mongodb://' + process.env.OPENSHIFT_MONGODB_DB_USERNAME
+    + ':' + process.env.OPENSHIFT_MONGODB_DB_PASSWORD
+    + process.env.OPENSHIFT_MONGODB_DB_HOST  + ':'
+    + process.env.OPENSHIFT_MONGODB_DB_PORT;
 mongoose.connect(mongoUri);
 
 var app = require('./lib/app').instance();
 
-var port = process.env.PORT || 3000;
+var port = process.env.OPENSHIFT_NODEJS_PORT || 3000;
 app.listen(port);
 console.log('Listening on port', port);
