@@ -1,35 +1,44 @@
 {
-  "name": "OpenShift-Sample-App",
-  "version": "1.0.0",
-  "description": "OpenShift Sample Application",
-  "keywords": [
-    "OpenShift",
-    "Node.js",
-    "application",
-    "openshift"
-  ],
-  "author": {
-    "name": "OpenShift",
-    "email": "ramr@example.org",
-    "url": "http://www.openshift.com/"
+  "name": "pongbot",
+  "version": "0.9.0",
+  "description": "Pongbot for Slack.",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.10.6",
+    "express-hal": "",
+    "node-slack": "^0.0.5",
+    "body-parser": "",
+    "mongoose": "",
+    "mongoose-pages": "",
+    "request": "",
+    "pluralize": "",
+    "q": "",
+    "underscore": ""
   },
-  "homepage": "http://www.openshift.com/",
+  "engines": {
+    "node": "0.10.x",
+    "npm": ">=1.1.2"
+  },
+  "devDependencies": {
+    "mocha": "",
+    "chai": "",
+    "chai-string": "",
+    "sinon": "",
+    "jshint": "",
+    "supertest": ""
+  },
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha --timeout=10s",
+    "lint": "./node_modules/jshint/bin/jshint lib test -c .jshint",
+    "start": "node app.js"
+  },
+  "author": "Andrew Vy",
+  "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "https://github.com/openshift/origin-server"
+    "url": "https://github.com/andrewvy/slack-pongbot.git"
   },
-
-  "engines": {
-    "node": ">= 0.6.0",
-    "npm": ">= 1.0.0"
-  },
-
-  "dependencies": {
-    "express": "~3.4.4"
-  },
-  "devDependencies": {},
-  "bundleDependencies": [],
-
-  "private": true,
-  "main": "server.js"
+  "bugs": {
+    "url" : "https://github.com/andrewvy/slack-pongbot/issues"
+  }
 }
