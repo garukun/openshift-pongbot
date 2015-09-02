@@ -2,7 +2,7 @@
   "name": "pongbot",
   "version": "0.9.0",
   "description": "Pongbot for Slack.",
-  "main": "app.js",
+  "main": "server.js",
   "dependencies": {
     "express": "^4.10.6",
     "express-hal": "",
@@ -30,7 +30,7 @@
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha --timeout=10s",
     "lint": "./node_modules/jshint/bin/jshint lib test -c .jshint",
-    "start": "node app.js"
+    "start": "node server.js"
   },
   "author": "Andrew Vy",
   "license": "ISC",
