@@ -29,6 +29,13 @@ pongbot register
 
 Challenge someone, or a team.
 
+Random player:
+
+
+```
+pongbot challenge random
+```
+
 Singles:
 
 
@@ -78,4 +85,3 @@ See [API Documentation](API.md).
 Copyright (c) 2014-2015, Andrew Vy and Contributors
 
 ISC License, see [LICENSE](LICENSE) for details.
-
