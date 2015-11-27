@@ -165,6 +165,30 @@ describe('Routes', function () {
     });
   });
 
+  describe.only('log', function() {
+    describe('with a challenge', function () {
+      beforeEach(function (done) {
+        pong.registerPlayers(['WangHao', 'ZhangJike']).then(function () {
+          pong.createSingleChallenge('WangHao', 'ZhangJike').then(function () {
+            done();
+          });
+        });
+      });
+
+      it('logs last 2 challenges', function(done) {
+
+      });
+
+      it('logs last 5 challenges', function(done) {
+
+      });
+
+      it('logs last 7 challenges', function(done) {
+
+      });
+    }
+  }
+
   describe('accept and decline', function() {
     describe('with a challenge', function () {
       beforeEach(function (done) {
