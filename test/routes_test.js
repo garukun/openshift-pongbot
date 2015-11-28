@@ -151,6 +151,17 @@ describe('Routes', function () {
             done();
           });
       });
+
+      it('creates a random challenge', function(done) {
+        request(app)
+          .post('/')
+          .send({ text: 'pongbot challenge random', user_name: 'wangHao' })
+          .expect(200)
+          .end(function(err, res) {
+            expect(res.body.text).to.match(/^WangHao has challenged (ZhangJike|ChenQi|ViktorBarna) to a ping pong match!/);
+            done();
+          });
+      });
     });
   });
 
